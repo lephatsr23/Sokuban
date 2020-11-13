@@ -12,13 +12,18 @@
             display: inline-block;
         }
         table, th, td {
-        
+            /* height:0px; */
             border-collapse:1px solid black;
             border : none;
             padding:0;
         }
         img{
-            display: block;
+            display: block ;
+        } 
+        .shadow {
+        -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+        box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
         }
     </style>
 </head>
@@ -29,38 +34,86 @@
         </button>
     </center>
     </br>
-    </br> 
     <div
-        style ="align-content: center; text-align: center; border: 1;"
+        style ="align-content: center;
+                text-align: center;
+                border: 1;
+
+          "
         id ="board"
     >
-    </div> 
-    </br>
+    </div>
     </br>
     <div style="align-content: center; text-align: center">
         <span id ="level">Level </span><br/>
         <span id = "Author">Author</span>
     </div>
     <br/>
-    Programmer: Phat Truong 2020
-    <br/>
-    Sokuban Skin by 
-    <a href="https://en.wikipedia.org/wiki/User:Carloseow" 
-    class="extiw" 
-    title="wikipedia:User:Carloseow"
+    <div 
+        id ="Link_author"
+        style="text-align: center" >
+        Programmer: Phat Truong 2020
+        Sokuban Skin by 
+        <a href="https://en.wikipedia.org/wiki/User:Carloseow" 
+        class="extiw" 
+        title="wikipedia:User:Carloseow"
+        >
+        Carloseow
+        </a> 
+        at
+        <a href="https://creativecommons.org/licenses/by/3.0" 
+        title="Creative Commons Attribution 3.0"
+        >
+         CC BY 3.0
+        </a>,
+        <a href="https://commons.wikimedia.org/w/index.php?curid=35846111">
+            Liên kết
+        </a>
+    </div>
+    <div
+        id = "result"
+        class ="shadow"
+        style="
+                border: 1px solid black;
+               align-content: center;
+               text-align: center;
+               width: 20%;
+               height: 40px;
+               position: absolute;
+               margin: 10px;
+               padding: 10px;
+               background-color: royalblue;
+               display:block;
+                left:38%;
+                top:10%;
+        "
     >
-    Carloseow
-    </a> 
-    at
-    <a href="https://creativecommons.org/licenses/by/3.0" 
-    title="Creative Commons Attribution 3.0"
+       <span 
+            id = "result_text"
+            style="color: yellow;
+            font: size 10;
+        " 
+       >
+       Chao mung ban toi sokuban
+       </span>
+    </div>
+    <div
+        id = "control"
+        style="
+            text-align: center;
+            align-content: center;
+            display: none;
+            " 
     >
-     CC BY 3.0
-    </a>,
-    <a href="https://commons.wikimedia.org/w/index.php?curid=35846111">
-        Liên kết
-    </a>
-
+    <center>
+        Control pannel: <br  />
+            <img src="dilen.png" height="50"   onclick = "doMove(UP)" style ="display :inline-block">
+            <br/>
+            <img src="diquatrai.png" width="50"  onclick = "doMove(LEFT)"   style ="display :inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="diquaphai.png" width="50"  onclick = "doMove(RIGHT)"   style ="display :inline-block">
+            <br/>
+            <img src="dixuong.png" width="50" onclick = "doMove(DOWN)"   style ="display :inline-block"> 
+     </center>
+    </div>
 </body>
-
 </html>
